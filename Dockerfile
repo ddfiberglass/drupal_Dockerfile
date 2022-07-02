@@ -1,4 +1,4 @@
-FROM bitnami/drupal:9.4.1-debian-11-r1
+FROM bitnami/drupal:9.3.16-debian-11-r2
 RUN cd /opt/bitnami/drupal && COMPOSER_MEMORY_LIMIT=-1 composer require drupal/chosen
 COPY add_files /opt/bitnami/drupal
 
