@@ -1,6 +1,6 @@
-FROM bitnami/drupal:9.4.1
+FROM bitnami/drupal:9.4.0
 RUN cd /opt/bitnami/drupal 
-RUN composer require drupal/chosen
+# RUN composer require drupal/chosen
 COPY add_files /opt/bitnami/drupal
 # RUN cd /opt/bitnami/drupal && composer update -W
 
