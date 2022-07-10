@@ -1,6 +1,5 @@
 FROM bitnami/drupal:9
-# RUN cd /opt/bitnami/drupal 
-RUN composer require drupal/chosen
+RUN cd /opt/bitnami/drupal && composer require drupal/chosen
 COPY add_files /opt/bitnami/drupal
 RUN cp /opt/bitnami/drupal/composer.json.bak /opt/bitnami/drupal/composer.json
 # RUN cd /opt/bitnami/drupal && composer update -W
