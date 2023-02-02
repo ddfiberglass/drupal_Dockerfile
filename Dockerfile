@@ -1,4 +1,4 @@
-FROM bitnami/drupal:10
+FROM bitnami/drupal:10.0.3
 # COPY add_files /opt/bitnami/drupal
 RUN cd /opt/bitnami/drupal && composer require drupal/ctools:^3.11 drupal/admin_toolbar drupal/field_permissions drupal/search_api drupal/search_api_solr drupal/facets drupal/address drupal/pathauto drupal/smart_date drupal/smtp drupal/honeypot --update-with-dependencies
 
