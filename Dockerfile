@@ -1,9 +1,8 @@
 FROM bitnami/drupal:10
 # COPY add_files /opt/bitnami/drupal
-RUN cd /opt/bitnami/drupal && composer require drupal/ctools drupal/admin_toolbar drupal/field_permissions drupal/search_api drupal/search_api_solr drupal/facets drupal/address drupal/pathauto drupal/smart_date drupal/smtp drupal/honeypot --update-with-dependencies
+RUN cd /opt/bitnami/drupal && composer require drupal/ctools drupal/admin_toolbar drupal/field_permissions drupal/search_api drupal/search_api_solr drupal/facets drupal/address drupal/pathauto drupal/smart_date drupal/smtp drupal/honeypot --update-with-dependencies && composer upgrade
 
-
-#  && composer upgrade 在RUN 最后面加上上面这个升级也可以运行，构建镜像。
+# && composer upgrade在RUN 最后面加上上面这个升级也可以运行，构建镜像。
 
 
 # RUN cd /opt/bitnami/drupal && composer update "drupal/core-*" --with-all-dependencies
